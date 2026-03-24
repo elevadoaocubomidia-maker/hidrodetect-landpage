@@ -35,3 +35,4 @@ jobs:
           local-dir: ./dist/public/
           server-dir: /httpdocs/
           dangerous-clean-slate: false
+          security: loose
