@@ -1,23 +1,27 @@
 const ITEMS = [
   {
-    title: "Sem esvaziar a piscina",
-    desc: "O serviço é feito com a piscina cheia. Zero custo e inconveniência com reenchimento e reequilíbrio químico.",
+    title: "Piscina cheia. Diagnóstico feito.",
+    desc: "Usamos hidrofone subaquático com o técnico dentro da piscina — equipamento e roupa de mergulho inclusos. A água fica onde está. Nenhum custo com esvaziamento, reenchimento ou reequilíbrio de cloro.",
   },
   {
-    title: "Sem quebrar antes de saber",
-    desc: "O equipamento localiza o ponto exato do vazamento. Nenhuma abertura desnecessária antes do diagnóstico.",
+    title: "Câmera termográfica para o que o olho não vê",
+    desc: "Infrared detecta variações de temperatura em paredes, pisos e lajes — revelando umidade oculta muito antes de virar mancha. Ideal para imóveis onde o vazamento ainda não apareceu na superfície.",
   },
   {
-    title: "Laudo técnico na mesma visita",
-    desc: "Documento com fotos e localização exata entregue no mesmo dia. Serve para seguro e contestação de conta de água.",
+    title: "Geofone digital de alta sensibilidade",
+    desc: "Capta o som do vazamento através de concreto, cerâmica e alvenaria. O ponto exato é marcado antes de qualquer abertura — sem desperdício de material, sem quebra desnecessária.",
   },
   {
-    title: "Geofone + hidrofone digital",
-    desc: "Equipamento especializado que identifica o vazamento pelo som e variação de pressão na tubulação. Precisão milimétrica.",
+    title: "Laudo técnico entregue na mesma visita",
+    desc: "Documento formal com fotos, croqui de localização e descrição técnica do problema. Aceito por seguradoras e válido para contestar conta de água alta junto à concessionária.",
   },
   {
-    title: "Diagnóstico e orçamento no mesmo dia",
-    desc: "Você sai da visita técnica sabendo exatamente qual é o problema e quanto vai custar para resolver.",
+    title: "Diagnóstico e orçamento antes de ir embora",
+    desc: "Você não fica no escuro esperando. Na mesma visita você já sabe o que está acontecendo, onde está e quanto vai custar para resolver — sem surpresas depois.",
+  },
+  {
+    title: "Arsenal completo para cada tipo de vazamento",
+    desc: "Hidrofone subaquático · Geofone digital · Câmera termográfica · Roupa de mergulho · Pressurização de rede. Cada vazamento tem uma solução técnica específica — não um martelo.",
   },
 ];
 
@@ -60,7 +64,7 @@ export default function Differentials() {
               margin: 0,
             }}
           >
-            Método não destrutivo, equipamento especializado e laudo formal — tudo o que um vazamento oculto exige.
+            Câmera termográfica, geofone digital, hidrofone subaquático e mergulhador. Cada ferramenta certa para cada tipo de problema — sem achismo, sem quebra desnecessária.
           </p>
         </div>
 
