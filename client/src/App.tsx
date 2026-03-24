@@ -5,6 +5,7 @@ import HowItWorks from "./components/HowItWorks";
 import Services from "./components/Services";
 import Differentials from "./components/Differentials";
 import LocalContext from "./components/LocalContext";
+import FAQ from "./components/FAQ";
 import FinalCTA from "./components/FinalCTA";
 import Footer from "./components/Footer";
 
@@ -19,6 +20,7 @@ export default function App() {
         <Services />
         <Differentials />
         <LocalContext />
+        <FAQ />
         <FinalCTA />
       </main>
       <Footer />
