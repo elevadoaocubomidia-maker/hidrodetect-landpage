@@ -2,17 +2,17 @@ const SYMPTOMS = [
   {
     icon: <PoolIcon />,
     title: "Piscina que perde nível toda semana",
-    desc: "Você completa a piscina com frequência e acha que é evaporação. Na maioria dos casos, é um vazamento na tubulação de circulação ou no fundo — invisível para quem não tem o equipamento certo.",
+    desc: "Você completa a piscina com frequência e acha que é evaporação. Na maioria dos casos, é um vazamento na tubulação de circulação ou no fundo. Invisível para quem não tem o equipamento certo.",
   },
   {
     icon: <DropIcon />,
     title: "Conta de água veio alta sem motivo aparente",
-    desc: "A conta subiu e ninguém mudou os hábitos. Isso geralmente indica um vazamento oculto em tubulação embutida na parede ou no piso — perdendo água 24 horas por dia.",
+    desc: "A conta subiu e ninguém mudou os hábitos. Isso geralmente indica um vazamento oculto em tubulação embutida na parede ou no piso. Perde água 24 horas por dia.",
   },
   {
     icon: <HouseIcon />,
     title: "Mancha de umidade que volta depois de pintar",
-    desc: "Pintou, mas a mancha voltou em semanas. O problema não é a tinta — é um vazamento ou infiltração que ainda não foi localizado. Sem diagnóstico correto, o problema sempre volta.",
+    desc: "Pintou, mas a mancha voltou em semanas. O problema não é a tinta: é um vazamento ou infiltração que ainda não foi localizado. Sem diagnóstico correto, o problema sempre volta.",
   },
 ];
 

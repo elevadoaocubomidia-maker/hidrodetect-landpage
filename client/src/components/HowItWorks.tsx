@@ -2,7 +2,7 @@ const STEPS = [
   {
     num: "01",
     title: "Chamado via WhatsApp",
-    desc: "Manda mensagem descrevendo o sintoma — nível da piscina caindo, conta de água alta, mancha de umidade.",
+    desc: "Manda mensagem descrevendo o sintoma: nível da piscina caindo, conta de água alta, mancha de umidade.",
   },
   {
     num: "02",
@@ -17,7 +17,7 @@ const STEPS = [
   {
     num: "04",
     title: "Laudo técnico com fotos",
-    desc: "Documento formal com localização exata, fotos e descrição do problema — entregue na mesma visita.",
+    desc: "Documento formal com localização exata, fotos e descrição do problema. Entregue na mesma visita.",
   },
   {
     num: "05",
@@ -27,7 +27,7 @@ const STEPS = [
   {
     num: "06",
     title: "Reparo (opcional)",
-    desc: "A Hidrodetect também executa o reparo dependendo do caso — ciclo completo dentro da mesma empresa.",
+    desc: "A Hidrodetect também executa o reparo dependendo do caso. Ciclo completo dentro da mesma empresa.",
   },
 ];
 
@@ -60,7 +60,7 @@ export default function HowItWorks() {
               color: "#1d1d1f",
             }}
           >
-            Da ligação ao laudo —<br />tudo na mesma visita.
+            Da ligação ao laudo:<br />tudo na mesma visita.
           </h2>
           <p
             style={{

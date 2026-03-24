@@ -87,7 +87,7 @@ export default function LocalContext() {
                 marginTop: 0,
               }}
             >
-              Porto Velho perde 77% da água tratada — o pior índice do Brasil.
+              Porto Velho perde 77% da água tratada. O pior índice do Brasil.
             </h2>
             <p
               style={{
@@ -98,7 +98,7 @@ export default function LocalContext() {
                 marginTop: 0,
               }}
             >
-              Se você mora em Porto Velho, as chances de ter um vazamento não detectado são altíssimas. Boa parte dessa perda acontece dentro das residências — sem que o morador perceba.
+              Se você mora em Porto Velho, as chances de ter um vazamento não detectado são altíssimas. Boa parte dessa perda acontece dentro das residências, sem que o morador perceba.
             </p>
             <p
               style={{
@@ -120,7 +120,7 @@ export default function LocalContext() {
                 paddingTop: 16,
               }}
             >
-              Fonte: Instituto Trata Brasil 2024 — Porto Velho ocupa o 100º lugar (último) no Ranking de Saneamento entre 100 municípios avaliados.
+              Fonte: Instituto Trata Brasil 2024. Porto Velho ocupa o 100º lugar (último) no Ranking de Saneamento entre 100 municípios avaliados.
             </p>
           </div>
         </div>

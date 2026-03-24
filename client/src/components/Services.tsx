@@ -3,14 +3,14 @@ const SERVICES = [
     icon: <PoolServiceIcon />,
     tag: "Piscina cheia",
     title: "Piscinas",
-    subtitle: "Hidrofone digital — sem esvaziar",
+    subtitle: "Hidrofone digital · sem esvaziar",
     desc: "Detectamos vazamentos na tubulação de circulação, ralo de fundo ou estrutura com a piscina cheia. Sem custo e inconveniência de reenchimento.",
   },
   {
     icon: <WallServiceIcon />,
     tag: "Precisão milimétrica",
     title: "Imóveis e paredes",
-    subtitle: "Geofone digital — sem quebrar antes de saber",
+    subtitle: "Geofone digital · sem quebrar antes de saber",
     desc: "Localizamos vazamentos em tubulações embutidas em paredes, pisos e lajes. Indicamos o ponto exato antes de qualquer abertura na alvenaria.",
   },
   {

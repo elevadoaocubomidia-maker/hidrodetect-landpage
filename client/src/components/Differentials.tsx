@@ -1,15 +1,15 @@
 const ITEMS = [
   {
     title: "Piscina cheia. Diagnóstico feito.",
-    desc: "Usamos hidrofone subaquático com o técnico dentro da piscina — equipamento e roupa de mergulho inclusos. A água fica onde está. Nenhum custo com esvaziamento, reenchimento ou reequilíbrio de cloro.",
+    desc: "Usamos hidrofone subaquático com o técnico dentro da piscina. Equipamento e roupa de mergulho inclusos. A água fica onde está. Nenhum custo com esvaziamento, reenchimento ou reequilíbrio de cloro.",
   },
   {
     title: "Câmera termográfica para o que o olho não vê",
-    desc: "Infrared detecta variações de temperatura em paredes, pisos e lajes — revelando umidade oculta muito antes de virar mancha. Ideal para imóveis onde o vazamento ainda não apareceu na superfície.",
+    desc: "Infrared detecta variações de temperatura em paredes, pisos e lajes, revelando umidade oculta muito antes de virar mancha. Ideal para imóveis onde o vazamento ainda não apareceu na superfície.",
   },
   {
     title: "Geofone digital de alta sensibilidade",
-    desc: "Capta o som do vazamento através de concreto, cerâmica e alvenaria. O ponto exato é marcado antes de qualquer abertura — sem desperdício de material, sem quebra desnecessária.",
+    desc: "Capta o som do vazamento através de concreto, cerâmica e alvenaria. O ponto exato é marcado antes de qualquer abertura. Sem desperdício de material, sem quebra desnecessária.",
   },
   {
     title: "Laudo técnico entregue na mesma visita",
@@ -17,11 +17,11 @@ const ITEMS = [
   },
   {
     title: "Diagnóstico e orçamento antes de ir embora",
-    desc: "Você não fica no escuro esperando. Na mesma visita você já sabe o que está acontecendo, onde está e quanto vai custar para resolver — sem surpresas depois.",
+    desc: "Você não fica no escuro esperando. Na mesma visita você já sabe o que está acontecendo, onde está e quanto vai custar para resolver. Sem surpresas depois.",
   },
   {
     title: "Arsenal completo para cada tipo de vazamento",
-    desc: "Hidrofone subaquático · Geofone digital · Câmera termográfica · Roupa de mergulho · Pressurização de rede. Cada vazamento tem uma solução técnica específica — não um martelo.",
+    desc: "Hidrofone subaquático · Geofone digital · Câmera termográfica · Roupa de mergulho · Pressurização de rede. Cada vazamento tem uma solução técnica específica. Não um martelo.",
   },
 ];
 
@@ -64,7 +64,7 @@ export default function Differentials() {
               margin: 0,
             }}
           >
-            Câmera termográfica, geofone digital, hidrofone subaquático e mergulhador. Cada ferramenta certa para cada tipo de problema — sem achismo, sem quebra desnecessária.
+            Câmera termográfica, geofone digital, hidrofone subaquático e mergulhador. Cada ferramenta certa para cada tipo de problema. Sem achismo, sem quebra desnecessária.
           </p>
         </div>
 

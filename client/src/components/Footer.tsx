@@ -114,7 +114,7 @@ export default function Footer() {
                 engenheirobatistel@gmail.com
               </a>
               <span style={{ color: "#6e6e73", fontSize: 14 }}>
-                R. Jardins, 1228 — Bairro Novo, Porto Velho/RO
+                R. Jardins, 1228, Bairro Novo, Porto Velho/RO
               </span>
             </div>
           </div>
@@ -172,7 +172,7 @@ export default function Footer() {
           }}
         >
           <p style={{ color: "#6e6e73", fontSize: 12, margin: 0 }}>
-            © {new Date().getFullYear()} Hidrodetect Engenharia e Impermeabilização — Batistel Engenharia Diagnóstica e Soluções em Impermeabilização Ltda
+            © {new Date().getFullYear()} Hidrodetect Engenharia e Impermeabilização · Batistel Engenharia Diagnóstica e Soluções em Impermeabilização Ltda
           </p>
           <p style={{ color: "#6e6e73", fontSize: 12, margin: 0 }}>
             CNPJ 65.566.133/0001-75
