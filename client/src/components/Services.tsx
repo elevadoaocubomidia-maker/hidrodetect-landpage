@@ -20,6 +20,13 @@ const SERVICES = [
     subtitle: "Documento formal na mesma visita",
     desc: "Fotos, localização exata e descrição do problema. Serve para contestar conta de água junto à concessionária, acionar seguro ou registrar o serviço.",
   },
+  {
+    icon: <PressureTestIcon />,
+    tag: "Confirmação técnica",
+    title: "Teste de estanqueidade",
+    subtitle: "Pressurização da rede · resultado na hora",
+    desc: "Pressurizamos a tubulação e monitoramos a queda de pressão para confirmar se há perda no circuito. Indicado antes de obras, reformas ou quando o medidor gira mesmo com tudo fechado.",
+  },
 ];
 
 export default function Services() {
@@ -56,7 +63,7 @@ export default function Services() {
         </div>
 
         {/* Cards */}
-        <div className="cards-grid">
+        <div className="services-grid">
           {SERVICES.map(({ icon, tag, title, subtitle, desc }) => (
             <div key={title} className="service-card">
               {/* Icon */}
@@ -159,6 +166,16 @@ function DocServiceIcon() {
       <line x1="16" y1="13" x2="8" y2="13" />
       <line x1="16" y1="17" x2="8" y2="17" />
       <polyline points="10 9 9 9 8 9" />
+    </svg>
+  );
+}
+
+function PressureTestIcon() {
+  return (
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 7v5l3 3" />
+      <path d="M7 3.34A9 9 0 0 1 21 12" />
     </svg>
   );
 }

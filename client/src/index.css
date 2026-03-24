@@ -197,6 +197,15 @@ img {
   .cards-grid { grid-template-columns: 1fr 1fr 1fr; }
 }
 
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media (min-width: 620px) {
+  .services-grid { grid-template-columns: 1fr 1fr; }
+}
+
 .diff-grid {
   display: grid;
   grid-template-columns: 1fr;
