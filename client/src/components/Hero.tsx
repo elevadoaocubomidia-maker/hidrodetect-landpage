@@ -127,7 +127,7 @@ export default function Hero() {
             margin: "0 0 24px",
           }}
         >
-          Encontramos o vazamento{" "}
+          Caça Vazamentos em Porto Velho{" "}
           <span style={{ color: "#00b4d8" }}>sem esvaziar</span>
           {" "}e{" "}
           <span style={{ color: "#00b4d8" }}>sem quebrar.</span>
