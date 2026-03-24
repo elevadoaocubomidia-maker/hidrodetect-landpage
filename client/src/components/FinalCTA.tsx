@@ -98,7 +98,7 @@ export default function FinalCTA() {
             (69) 9946-3585
           </a>
           <a
-            href="mailto:engenheirobatistel@gmail.com"
+            href="mailto:cacavazamentoshidrodetect@gmail.com"
             style={{
               display: "flex",
               alignItems: "center",
@@ -112,7 +112,26 @@ export default function FinalCTA() {
             onMouseLeave={(e) => (e.currentTarget.style.color = "#6e6e73")}
           >
             <MailIcon />
-            engenheirobatistel@gmail.com
+            cacavazamentoshidrodetect@gmail.com
+          </a>
+          <a
+            href="https://www.instagram.com/hidrodetect_cacavazamentos/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 8,
+              color: "#6e6e73",
+              textDecoration: "none",
+              fontSize: 15,
+              transition: "color 200ms",
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = "#E1306C")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "#6e6e73")}
+          >
+            <InstagramIcon />
+            @hidrodetect_cacavazamentos
           </a>
         </div>
       </div>
@@ -141,6 +160,16 @@ function MailIcon() {
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
       <polyline points="22,6 12,13 2,6" />
+    </svg>
+  );
+}
+
+function InstagramIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
     </svg>
   );
 }

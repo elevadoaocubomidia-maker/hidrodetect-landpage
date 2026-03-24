@@ -106,12 +106,27 @@ export default function Footer() {
                 (69) 9946-3585
               </a>
               <a
-                href="mailto:engenheirobatistel@gmail.com"
+                href="mailto:cacavazamentoshidrodetect@gmail.com"
                 style={{ color: "#6e6e73", textDecoration: "none", fontSize: 14, transition: "color 200ms" }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = "#1a6fbb")}
                 onMouseLeave={(e) => (e.currentTarget.style.color = "#6e6e73")}
               >
-                engenheirobatistel@gmail.com
+                cacavazamentoshidrodetect@gmail.com
+              </a>
+              <a
+                href="https://www.instagram.com/hidrodetect_cacavazamentos/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ display: "flex", alignItems: "center", gap: 6, color: "#6e6e73", textDecoration: "none", fontSize: 14, transition: "color 200ms" }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "#E1306C")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "#6e6e73")}
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                </svg>
+                @hidrodetect_cacavazamentos
               </a>
               <span style={{ color: "#6e6e73", fontSize: 14 }}>
                 R. Jardins, 1228, Bairro Novo, Porto Velho/RO
