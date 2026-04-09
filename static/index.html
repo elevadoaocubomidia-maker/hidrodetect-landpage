@@ -1,0 +1,1573 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caça Vazamentos em Porto Velho | Hidrodetect</title>
+  <meta name="description" content="Detectamos vazamentos em piscinas e imóveis sem quebrar e sem esvaziar. Geofone digital, hidrofone e laudo técnico na mesma visita. Porto Velho e região.">
+  <link rel="canonical" href="https://vazamentoshidrodetect.com.br/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Caça Vazamentos em Porto Velho | Hidrodetect">
+  <meta property="og:description" content="Detectamos vazamentos em piscinas e imóveis sem quebrar e sem esvaziar. Geofone digital, hidrofone e laudo técnico na mesma visita. Porto Velho e região.">
+  <meta property="og:image" content="https://vazamentoshidrodetect.com.br/og-image.jpg">
+  <meta property="og:url" content="https://vazamentoshidrodetect.com.br/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Hidrodetect">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Caça Vazamentos em Porto Velho | Hidrodetect">
+  <meta name="twitter:description" content="Detectamos vazamentos em piscinas e imóveis sem quebrar e sem esvaziar. Laudo técnico na mesma visita.">
+  <meta name="twitter:image" content="https://vazamentoshidrodetect.com.br/og-image.jpg">
+
+  <!-- Preload critical asset -->
+  <link rel="preload" as="image" href="/logo-branco.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Google Tag Manager -->
+  <!-- Pixel e GA4 configurados dentro do GTM (container GTM-M5XT94WB) -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-M5XT94WB');</script>
+  <!-- End Google Tag Manager -->
+
+  <style>
+    /* ========================================
+       RESET & BASE
+       ======================================== */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: #1d1d1f;
+      background: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    button { border: none; background: none; cursor: pointer; font-family: inherit; }
+
+    /* ========================================
+       CSS CUSTOM PROPERTIES
+       ======================================== */
+    :root {
+      --navy: #0a1628;
+      --cyan: #00b4d8;
+      --blue: #1a6fbb;
+      --gray-light: #f5f5f7;
+      --gray-text: #6e6e73;
+      --white: #fff;
+      --dark: #1d1d1f;
+    }
+
+    /* ========================================
+       ANIMATIONS — Nano Banana
+       ======================================== */
+    @keyframes ripple-out {
+      0%   { transform: translate(-50%, -50%) scale(0.6); opacity: 0.18; }
+      100% { transform: translate(-50%, -50%) scale(2.2); opacity: 0; }
+    }
+
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%      { opacity: 0.5; transform: scale(1.6); }
+    }
+
+    @keyframes fade-up-in {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Intersection Observer fade-in */
+    [data-animate] {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    [data-animate].visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      [data-animate] { opacity: 1; transform: none; transition: none; }
+      .ripple { animation: none !important; }
+      .hero-badge, .hero-h1, .hero-sub, .hero-ctas, .hero-badges { animation: none !important; opacity: 1; transform: none; }
+    }
+
+    /* ========================================
+       HEADER
+       ======================================== */
+    .site-header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 64px;
+      background: rgba(10, 22, 40, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 clamp(16px, 4vw, 48px);
+    }
+    .header-logo img { height: 32px; width: auto; }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+    .nav-links a {
+      color: rgba(255,255,255,0.75);
+      font-size: 14px;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: #fff; }
+    .header-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #25d366;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 8px 16px;
+      border-radius: 8px;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .header-cta:hover { background: #1fb855; }
+    .header-cta svg { width: 16px; height: 16px; fill: currentColor; }
+    .burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      z-index: 1001;
+    }
+    .burger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #fff;
+      border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    @media (max-width: 768px) {
+      .burger { display: flex; }
+      .nav-links {
+        position: fixed;
+        top: 0; right: 0;
+        width: 280px;
+        height: 100dvh;
+        background: var(--navy);
+        flex-direction: column;
+        justify-content: center;
+        gap: 32px;
+        transform: translateX(100%);
+        transition: transform 0.35s ease;
+        padding: 24px;
+      }
+      .nav-links.open { transform: translateX(0); }
+      .nav-links a { font-size: 18px; color: #fff; }
+    }
+
+    /* ========================================
+       HERO — Seção 1
+       ======================================== */
+    .hero {
+      position: relative;
+      min-height: 100dvh;
+      padding: 64px clamp(16px, 4vw, 48px) 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--navy);
+      overflow: hidden;
+    }
+    .hero-ripples {
+      position: absolute;
+      top: 50%; left: 50%;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .ripple {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid rgba(0, 180, 216, 0.18);
+      pointer-events: none;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 720px;
+    }
+    .hero-badge,
+    .hero-h1,
+    .hero-sub,
+    .hero-ctas,
+    .hero-badges {
+      opacity: 0;
+      animation: fade-up-in 0.7s ease forwards;
+    }
+    .hero-badge  { animation-delay: 0ms; }
+    .hero-h1     { animation-delay: 100ms; }
+    .hero-sub    { animation-delay: 200ms; }
+    .hero-ctas   { animation-delay: 300ms; }
+    .hero-badges { animation-delay: 400ms; }
+
+    .location-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0, 180, 216, 0.12);
+      border: 1px solid rgba(0, 180, 216, 0.25);
+      color: var(--cyan);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-bottom: 24px;
+    }
+    .pulse-dot {
+      width: 8px; height: 8px;
+      background: var(--cyan);
+      border-radius: 50%;
+      animation: pulse-dot 2s ease infinite;
+    }
+    .hero h1 {
+      font-size: clamp(32px, 5.5vw, 56px);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.12;
+      margin-bottom: 20px;
+      letter-spacing: -0.02em;
+    }
+    .hero h1 span { color: var(--cyan); }
+    .hero-sub {
+      font-size: clamp(16px, 2vw, 19px);
+      color: rgba(255,255,255,0.7);
+      line-height: 1.6;
+      margin-bottom: 36px;
+      max-width: 580px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero-ctas {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .btn-wa {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #25d366;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 700;
+      padding: 16px 32px;
+      border-radius: 12px;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-wa:hover { background: #1fb855; }
+    .btn-wa svg { width: 20px; height: 20px; fill: currentColor; }
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.8);
+      font-size: 15px;
+      font-weight: 600;
+      padding: 16px 28px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.2);
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-ghost:hover { border-color: rgba(255,255,255,0.5); color: #fff; }
+    .hero-badges {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .hero-badges .tag {
+      font-size: 12px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.5);
+      background: rgba(255,255,255,0.06);
+      padding: 6px 14px;
+      border-radius: 100px;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    /* ========================================
+       SECTION UTILITIES
+       ======================================== */
+    .section-pad {
+      padding: 96px clamp(16px, 4vw, 48px);
+    }
+    @media (max-width: 768px) {
+      .section-pad { padding: 64px 16px; }
+    }
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    .eyebrow {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 12px;
+    }
+    .eyebrow-cyan { color: var(--cyan); }
+    .eyebrow-dark { color: var(--gray-text); }
+    .section-title {
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+    .section-subtitle {
+      font-size: clamp(15px, 1.8vw, 18px);
+      color: var(--gray-text);
+      line-height: 1.6;
+      max-width: 620px;
+      margin-bottom: 48px;
+    }
+    .section-subtitle-white { color: rgba(255,255,255,0.6); }
+
+    /* ========================================
+       SEÇÃO 2 — PROBLEMA
+       ======================================== */
+    .bg-gray { background: var(--gray-light); }
+    .bg-white { background: var(--white); }
+    .bg-navy { background: var(--navy); color: #fff; }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 768px) {
+      .problem-grid { grid-template-columns: 1fr; }
+    }
+    .problem-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.04);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .problem-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06), 0 16px 40px rgba(0,0,0,0.06);
+    }
+    .problem-icon {
+      width: 48px; height: 48px;
+      background: rgba(0, 180, 216, 0.08);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .problem-icon svg { width: 24px; height: 24px; color: var(--cyan); }
+    .problem-card h3 {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--dark);
+    }
+    .problem-card p {
+      font-size: 15px;
+      color: var(--gray-text);
+      line-height: 1.6;
+    }
+
+    /* ========================================
+       SEÇÃO 3 — COMO FUNCIONA
+       ======================================== */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+    @media (max-width: 768px) {
+      .steps-grid { grid-template-columns: 1fr; }
+    }
+    .step-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .step-number {
+      flex-shrink: 0;
+      width: 44px; height: 44px;
+      background: var(--navy);
+      color: var(--cyan);
+      font-size: 16px;
+      font-weight: 700;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .step-text h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+    .step-text p {
+      font-size: 15px;
+      color: var(--gray-text);
+      line-height: 1.6;
+    }
+
+    /* ========================================
+       SEÇÃO 4 — SERVIÇOS
+       ======================================== */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 768px) {
+      .services-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 16px;
+        padding-bottom: 16px;
+        -webkit-overflow-scrolling: touch;
+      }
+      .services-grid::-webkit-scrollbar { display: none; }
+    }
+    .service-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(0, 180, 216, 0.18);
+      border-radius: 16px;
+      padding: 28px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    @media (max-width: 768px) {
+      .service-card {
+        flex: 0 0 280px;
+        scroll-snap-align: start;
+      }
+    }
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(0, 180, 216, 0.1);
+    }
+    .service-icon {
+      width: 44px; height: 44px;
+      background: rgba(0, 180, 216, 0.1);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+    .service-icon svg { width: 22px; height: 22px; color: var(--cyan); }
+    .service-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--cyan);
+      background: rgba(0, 180, 216, 0.1);
+      padding: 4px 10px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+    }
+    .service-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+    .service-card .service-subtitle {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--cyan);
+      margin-bottom: 12px;
+    }
+    .service-card p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.6;
+    }
+
+    /* ========================================
+       SEÇÃO 5 — DIFERENCIAIS
+       ======================================== */
+    .diff-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+    @media (max-width: 768px) {
+      .diff-grid { grid-template-columns: 1fr; }
+    }
+    .diff-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .diff-check {
+      flex-shrink: 0;
+      width: 32px; height: 32px;
+      background: rgba(0, 180, 216, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+    .diff-check svg { width: 16px; height: 16px; color: var(--cyan); }
+    .diff-item h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+    .diff-item p {
+      font-size: 15px;
+      color: var(--gray-text);
+      line-height: 1.6;
+    }
+
+    /* ========================================
+       SEÇÃO 6 — CONTEXTO LOCAL (77%)
+       ======================================== */
+    .context-section {
+      position: relative;
+      overflow: hidden;
+    }
+    .context-glow {
+      position: absolute;
+      top: -40%;
+      left: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(0,180,216,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .context-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    @media (max-width: 768px) {
+      .context-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+      }
+    }
+    .context-stat .counter-wrap {
+      margin-bottom: 8px;
+    }
+    .counter-number {
+      font-size: clamp(88px, 16vw, 148px);
+      font-weight: 800;
+      color: var(--cyan);
+      line-height: 1;
+    }
+    .counter-percent {
+      font-size: clamp(48px, 8vw, 80px);
+      font-weight: 800;
+      color: var(--cyan);
+    }
+    .counter-caption {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(0, 180, 216, 0.6);
+    }
+    .context-text h2 {
+      font-size: clamp(24px, 3.5vw, 36px);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .context-text p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    .context-text .source {
+      font-size: 13px;
+      color: rgba(255,255,255,0.35);
+      margin-top: 24px;
+      line-height: 1.5;
+    }
+
+    /* ========================================
+       SEÇÃO 7 — FAQ
+       ======================================== */
+    .faq-list {
+      max-width: 760px;
+    }
+    .faq-item {
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+    .faq-btn {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--dark);
+      text-align: left;
+      cursor: pointer;
+      gap: 16px;
+    }
+    .faq-btn .faq-icon {
+      flex-shrink: 0;
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: var(--gray-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    .faq-item.open .faq-btn .faq-icon {
+      transform: rotate(45deg);
+      background: var(--cyan);
+    }
+    .faq-item.open .faq-btn .faq-icon svg { color: #fff; }
+    .faq-icon svg { width: 14px; height: 14px; color: var(--gray-text); }
+    .faq-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+    }
+    .faq-item.open .faq-body { max-height: 500px; }
+    .faq-body p {
+      font-size: 15px;
+      color: var(--gray-text);
+      line-height: 1.7;
+      padding-bottom: 20px;
+    }
+
+    /* ========================================
+       SEÇÃO 8 — CTA FINAL
+       ======================================== */
+    .cta-section { text-align: center; }
+    .cta-section .section-subtitle { margin-left: auto; margin-right: auto; }
+    .btn-wa-lg {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: #25d366;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 700;
+      padding: 18px 40px;
+      border-radius: 14px;
+      transition: background 0.2s, transform 0.15s;
+      margin-bottom: 40px;
+    }
+    .btn-wa-lg:hover { background: #1fb855; }
+    .btn-wa-lg svg { width: 22px; height: 22px; fill: currentColor; }
+    .cta-contacts {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+    .cta-contacts a,
+    .cta-contacts span {
+      font-size: 14px;
+      color: var(--gray-text);
+      transition: color 0.2s;
+    }
+    .cta-contacts a:hover { color: var(--cyan); }
+
+    /* ========================================
+       FOOTER
+       ======================================== */
+    .site-footer {
+      background: var(--gray-light);
+      padding: 48px clamp(16px, 4vw, 48px) 24px;
+    }
+    .footer-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 32px;
+      margin-bottom: 32px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+    .footer-brand img { height: 32px; margin-bottom: 12px; }
+    .footer-tagline {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--gray-text);
+      margin-bottom: 8px;
+    }
+    .footer-address {
+      font-size: 14px;
+      color: var(--gray-text);
+      line-height: 1.6;
+    }
+    .footer-contacts {
+      font-size: 14px;
+      color: var(--gray-text);
+      line-height: 1.8;
+    }
+    .footer-contacts a { transition: color 0.2s; }
+    .footer-contacts a:hover { color: var(--cyan); }
+    .footer-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .footer-nav a {
+      font-size: 14px;
+      color: var(--gray-text);
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .footer-nav a:hover { color: var(--dark); }
+    .footer-bottom {
+      text-align: center;
+      font-size: 13px;
+      color: var(--gray-text);
+    }
+
+    /* ========================================
+       UTILITY
+       ======================================== */
+    .text-white { color: #fff; }
+    .text-left { text-align: left; }
+    .mb-0 { margin-bottom: 0; }
+
+    /* WA floating for mobile (optional enhancement) */
+    @media (max-width: 768px) {
+      .header-cta-desktop { display: none; }
+    }
+    @media (min-width: 769px) {
+      .header-cta-mobile { display: none; }
+    }
+  </style>
+
+  <!-- Schema JSON-LD: LocalBusiness -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Hidrodetect Caça Vazamentos",
+  "alternateName": "Hidrodetect Engenharia e Impermeabilização",
+  "description": "Empresa especializada em detecção de vazamentos por métodos não destrutivos em Porto Velho, Rondônia. Utilizamos geofone digital, hidrofone subaquático e câmera termográfica para localizar o ponto exato do vazamento sem quebrar paredes nem esvaziar piscinas.",
+  "url": "https://vazamentoshidrodetect.com.br",
+  "telephone": "+55-69-99946-3585",
+  "email": "cacavazamentoshidrodetect@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "R. Jardins, 1228, Casa 89",
+    "addressLocality": "Porto Velho",
+    "addressRegion": "RO",
+    "postalCode": "76817-001",
+    "addressCountry": "BR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "-8.7612",
+    "longitude": "-63.9014"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Porto Velho"
+  },
+  "priceRange": "$$",
+  "image": "https://vazamentoshidrodetect.com.br/og-image.jpg",
+  "logo": "https://vazamentoshidrodetect.com.br/logo-branco.png",
+  "sameAs": [
+    "https://www.instagram.com/hidrodetect_cacavazamentos/"
+  ],
+  "hasMap": "https://maps.google.com/?q=Porto+Velho+RO",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "opens": "08:00",
+    "closes": "18:00"
+  },
+  "knowsAbout": [
+    "Detecção de vazamentos",
+    "Caça vazamentos piscinas",
+    "Geofone digital",
+    "Hidrofone subaquático",
+    "Câmera termográfica",
+    "Laudo técnico de vazamento",
+    "Teste de estanqueidade"
+  ]
+}
+  </script>
+
+  <!-- Schema JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Precisa esvaziar a piscina para detectar o vazamento?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não. O serviço é realizado com a piscina cheia. Usamos hidrofone digital subaquático, com o técnico dentro da água, que identifica o ponto exato do vazamento pelo som. Você não tem nenhum custo com esvaziamento, reenchimento ou reequilíbrio de produtos químicos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Precisa quebrar a parede ou o piso para encontrar o vazamento?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não antes do diagnóstico. O geofone digital capta o som do vazamento através de concreto, cerâmica e alvenaria. Só após identificar o ponto exato é que qualquer abertura é necessária, e só naquele ponto específico, sem demolição desnecessária."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O que é geofone digital e como funciona na detecção de vazamentos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Geofone digital é um equipamento de escuta eletrônica de alta sensibilidade que capta vibrações acústicas produzidas pela água escapando sob pressão em tubulações embutidas. O técnico posiciona o sensor na superfície e o equipamento amplifica o som do vazamento, permitindo localizar o ponto exato sem abertura prévia."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O que é hidrofone e para que serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hidrofone é um microfone subaquático especializado para detecção de vazamentos em piscinas. Ele é inserido na água e capta o som do fluxo de água escapando pela tubulação de circulação, pelo ralo de fundo ou pela estrutura da piscina. Funciona com a piscina completamente cheia e em operação normal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O que é o laudo técnico de vazamento?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "É um documento formal emitido na mesma visita, com fotos do local, descrição técnica do problema, croqui de localização do ponto do vazamento e identificação do tipo de falha. O laudo é aceito por seguradoras para acionamento do seguro residencial e pode ser usado para contestar uma conta de água alta junto à concessionária."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <!-- GTM Body -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M5XT94WB"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- ============================================
+       HEADER
+       ============================================ -->
+  <header class="site-header">
+    <a href="/" class="header-logo">
+      <img src="/logo-branco.png" alt="Hidrodetect" height="32" width="auto">
+    </a>
+
+    <nav class="nav-links">
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#diferenciais">Diferenciais</a>
+      <a href="#contato">Contato</a>
+      <a href="https://wa.me/5569999463585?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20agendar%20uma%20detec%C3%A7%C3%A3o%20de%20vazamento." data-wa-cta class="header-cta header-cta-desktop" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.612.638l4.702-1.399A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.37 0-4.567-.72-6.396-1.953l-.342-.235-3.536 1.052 1.07-3.38-.26-.38A9.96 9.96 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+        Falar no WhatsApp
+      </a>
+    </nav>
+
+    <button class="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <!-- ============================================
+         SEÇÃO 1: HERO
+         ============================================ -->
+    <section id="inicio" class="hero">
+      <!-- Ripple rings -->
+      <div class="hero-ripples">
+        <div class="ripple" style="width:100px;height:100px;animation:ripple-out 7s ease-out 0s infinite"></div>
+        <div class="ripple" style="width:200px;height:200px;animation:ripple-out 7s ease-out 1.1s infinite"></div>
+        <div class="ripple" style="width:320px;height:320px;animation:ripple-out 7s ease-out 2.2s infinite"></div>
+        <div class="ripple" style="width:450px;height:450px;animation:ripple-out 7s ease-out 3.3s infinite"></div>
+        <div class="ripple" style="width:600px;height:600px;animation:ripple-out 7s ease-out 4.4s infinite"></div>
+        <div class="ripple" style="width:760px;height:760px;animation:ripple-out 7s ease-out 5.5s infinite"></div>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="location-badge"><span class="pulse-dot"></span> Porto Velho e região</span>
+        </div>
+
+        <h1 class="hero-h1">Caça Vazamentos em Porto Velho <span>sem esvaziar</span> e <span>sem quebrar.</span></h1>
+
+        <p class="hero-sub">Laudo técnico com fotos na mesma visita. Geofone digital e hidrofone para localizar com precisão.</p>
+
+        <div class="hero-ctas">
+          <a href="https://wa.me/5569999463585?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20agendar%20uma%20detec%C3%A7%C3%A3o%20de%20vazamento." data-wa-cta data-magnetic class="btn-wa" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.612.638l4.702-1.399A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.37 0-4.567-.72-6.396-1.953l-.342-.235-3.536 1.052 1.07-3.38-.26-.38A9.96 9.96 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+            Falar no WhatsApp
+          </a>
+          <a href="#como-funciona" class="btn-ghost">Como funciona</a>
+        </div>
+
+        <div class="hero-badges">
+          <span class="tag">Geofone digital</span>
+          <span class="tag">Hidrofone</span>
+          <span class="tag">Termografia</span>
+          <span class="tag">Laudo técnico</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SEÇÃO 2: PROBLEMA
+         ============================================ -->
+    <section id="problema" class="section-pad bg-gray">
+      <div class="container">
+        <p class="eyebrow eyebrow-dark" data-animate>Você reconhece algum desses sintomas?</p>
+        <h2 class="section-title" data-animate>Você não está sozinho.</h2>
+        <p class="section-subtitle" data-animate>A maioria das pessoas demora meses para perceber. A Hidrodetect localiza o ponto exato e resolve.</p>
+
+        <div class="problem-grid">
+          <!-- Card 1: Piscina -->
+          <div class="problem-card" data-animate style="transition-delay:0ms">
+            <div class="problem-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20c.9-.5 1.8-1 3-1s2.1.5 3 1c.9.5 1.8 1 3 1s2.1-.5 3-1c.9-.5 1.8-1 3-1s2.1.5 3 1"/><path d="M2 16c.9-.5 1.8-1 3-1s2.1.5 3 1c.9.5 1.8 1 3 1s2.1-.5 3-1c.9-.5 1.8-1 3-1s2.1.5 3 1"/><path d="M4 12V4a2 2 0 012-2h12a2 2 0 012 2v8"/></svg>
+            </div>
+            <h3>Piscina que perde nível toda semana</h3>
+            <p>Você completa a piscina com frequência e acha que é evaporação. Na maioria dos casos, é um vazamento na tubulação de circulação ou no fundo. Invisível para quem não tem o equipamento certo.</p>
+          </div>
+
+          <!-- Card 2: Conta alta -->
+          <div class="problem-card" data-animate style="transition-delay:150ms">
+            <div class="problem-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg>
+            </div>
+            <h3>Conta de água veio alta sem motivo aparente</h3>
+            <p>A conta subiu e ninguém mudou os hábitos. Isso geralmente indica um vazamento oculto em tubulação embutida na parede ou no piso. Perde água 24 horas por dia.</p>
+          </div>
+
+          <!-- Card 3: Umidade -->
+          <div class="problem-card" data-animate style="transition-delay:300ms">
+            <div class="problem-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <h3>Mancha de umidade que volta depois de pintar</h3>
+            <p>Pintou, mas a mancha voltou em semanas. O problema não é a tinta: é um vazamento ou infiltração que ainda não foi localizado. Sem diagnóstico correto, o problema sempre volta.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SEÇÃO 3: COMO FUNCIONA
+         ============================================ -->
+    <section id="como-funciona" class="section-pad bg-white">
+      <div class="container">
+        <p class="eyebrow eyebrow-dark" data-animate>Processo</p>
+        <h2 class="section-title" data-animate>Da ligação ao laudo: tudo na mesma visita.</h2>
+        <p class="section-subtitle" data-animate>Sem surpresa, sem obra desnecessária. Você sabe o que tem antes de qualquer martelada.</p>
+
+        <div class="steps-grid">
+          <div class="step-item" data-animate style="transition-delay:0ms">
+            <div class="step-number">1</div>
+            <div class="step-text">
+              <h3>Chamado via WhatsApp</h3>
+              <p>Manda mensagem descrevendo o sintoma: nível da piscina caindo, conta de água alta, mancha de umidade.</p>
+            </div>
+          </div>
+          <div class="step-item" data-animate style="transition-delay:100ms">
+            <div class="step-number">2</div>
+            <div class="step-text">
+              <h3>Visita técnica agendada</h3>
+              <p>O Rafael vai ao local com equipamento especializado em hora marcada. Atendemos Porto Velho e região.</p>
+            </div>
+          </div>
+          <div class="step-item" data-animate style="transition-delay:200ms">
+            <div class="step-number">3</div>
+            <div class="step-text">
+              <h3>Detecção com geofone e hidrofone</h3>
+              <p>O equipamento mapeia a tubulação e localiza o ponto exato do vazamento pelo som e variação de pressão.</p>
+            </div>
+          </div>
+          <div class="step-item" data-animate style="transition-delay:300ms">
+            <div class="step-number">4</div>
+            <div class="step-text">
+              <h3>Laudo técnico com fotos</h3>
+              <p>Documento formal com localização exata, fotos e descrição do problema. Entregue na mesma visita.</p>
+            </div>
+          </div>
+          <div class="step-item" data-animate style="transition-delay:400ms">
+            <div class="step-number">5</div>
+            <div class="step-text">
+              <h3>Orçamento de reparo</h3>
+              <p>Após confirmar o diagnóstico, o Rafael apresenta o orçamento para correção. Transparência total.</p>
+            </div>
+          </div>
+          <div class="step-item" data-animate style="transition-delay:500ms">
+            <div class="step-number">6</div>
+            <div class="step-text">
+              <h3>Reparo (opcional)</h3>
+              <p>A Hidrodetect também executa o reparo dependendo do caso. Ciclo completo dentro da mesma empresa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SEÇÃO 4: SERVIÇOS
+         ============================================ -->
+    <section id="servicos" class="section-pad bg-navy">
+      <div class="container">
+        <p class="eyebrow eyebrow-cyan" data-animate>Serviços</p>
+        <h2 class="section-title text-white" data-animate>O que a Hidrodetect resolve.</h2>
+        <p class="section-subtitle section-subtitle-white" data-animate style="margin-bottom:48px">Equipamento especializado para cada tipo de vazamento.</p>
+
+        <div class="services-grid">
+          <!-- Card 1: Piscinas -->
+          <div class="service-card" data-animate style="transition-delay:0ms">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20c.9-.5 1.8-1 3-1s2.1.5 3 1c.9.5 1.8 1 3 1s2.1-.5 3-1c.9-.5 1.8-1 3-1s2.1.5 3 1"/><path d="M2 16c.9-.5 1.8-1 3-1s2.1.5 3 1c.9.5 1.8 1 3 1s2.1-.5 3-1c.9-.5 1.8-1 3-1s2.1.5 3 1"/><path d="M4 12V4a2 2 0 012-2h12a2 2 0 012 2v8"/></svg>
+            </div>
+            <span class="service-tag">Piscina cheia</span>
+            <h3>Piscinas</h3>
+            <p class="service-subtitle">Hidrofone digital · sem esvaziar</p>
+            <p>Detectamos vazamentos na tubulação de circulação, ralo de fundo ou estrutura com a piscina cheia. Sem custo e inconveniência de reenchimento.</p>
+          </div>
+
+          <!-- Card 2: Imóveis -->
+          <div class="service-card" data-animate style="transition-delay:150ms">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>
+            </div>
+            <span class="service-tag">Precisão milimétrica</span>
+            <h3>Imóveis e paredes</h3>
+            <p class="service-subtitle">Geofone digital · sem quebrar antes de saber</p>
+            <p>Localizamos vazamentos em tubulações embutidas em paredes, pisos e lajes. Indicamos o ponto exato antes de qualquer abertura na alvenaria.</p>
+          </div>
+
+          <!-- Card 3: Laudo -->
+          <div class="service-card" data-animate style="transition-delay:300ms">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <span class="service-tag">Validade técnica</span>
+            <h3>Laudo técnico</h3>
+            <p class="service-subtitle">Documento formal na mesma visita</p>
+            <p>Fotos, localização exata e descrição do problema. Serve para contestar conta de água junto à concessionária, acionar seguro ou registrar o serviço.</p>
+          </div>
+
+          <!-- Card 4: Estanqueidade -->
+          <div class="service-card" data-animate style="transition-delay:450ms">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <span class="service-tag">Confirmação técnica</span>
+            <h3>Teste de estanqueidade</h3>
+            <p class="service-subtitle">Pressurização da rede · resultado na hora</p>
+            <p>Pressurizamos a tubulação e monitoramos a queda de pressão para confirmar se há perda no circuito. Indicado antes de obras, reformas ou quando o medidor gira mesmo com tudo fechado.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SEÇÃO 5: DIFERENCIAIS
+         ============================================ -->
+    <section id="diferenciais" class="section-pad bg-gray">
+      <div class="container">
+        <p class="eyebrow eyebrow-dark" data-animate>Diferenciais</p>
+        <h2 class="section-title text-left" data-animate>Por que escolher a Hidrodetect.</h2>
+        <p class="section-subtitle" data-animate>Câmera termográfica, geofone digital, hidrofone subaquático e mergulhador. Cada ferramenta certa para cada tipo de problema. Sem achismo, sem quebra desnecessária.</p>
+
+        <div class="diff-grid">
+          <!-- Item 1 -->
+          <div class="diff-item" data-animate style="transition-delay:0ms">
+            <div class="diff-check">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <h3>Piscina cheia. Diagnóstico feito.</h3>
+              <p>Usamos hidrofone subaquático com o técnico dentro da piscina. Equipamento e roupa de mergulho inclusos. A água fica onde está. Nenhum custo com esvaziamento, reenchimento ou reequilíbrio de cloro.</p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="diff-item" data-animate style="transition-delay:100ms">
+            <div class="diff-check">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <h3>Câmera termográfica para o que o olho não vê</h3>
+              <p>Infrared detecta variações de temperatura em paredes, pisos e lajes, revelando umidade oculta muito antes de virar mancha. Ideal para imóveis onde o vazamento ainda não apareceu na superfície.</p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="diff-item" data-animate style="transition-delay:200ms">
+            <div class="diff-check">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <h3>Geofone digital de alta sensibilidade</h3>
+              <p>Capta o som do vazamento através de concreto, cerâmica e alvenaria. O ponto exato é marcado antes de qualquer abertura. Sem desperdício de material, sem quebra desnecessária.</p>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="diff-item" data-animate style="transition-delay:300ms">
+            <div class="diff-check">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <h3>Laudo técnico entregue na mesma visita</h3>
+              <p>Documento formal com fotos, croqui de localização e descrição técnica do problema. Aceito por seguradoras e válido para contestar conta de água alta junto à concessionária.</p>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="diff-item" data-animate style="transition-delay:400ms">
+            <div class="diff-check">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <h3>Diagnóstico e orçamento antes de ir embora</h3>
+              <p>Você não fica no escuro esperando. Na mesma visita você já sabe o que está acontecendo, onde está e quanto vai custar para resolver. Sem surpresas depois.</p>
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="diff-item" data-animate style="transition-delay:500ms">
+            <div class="diff-check">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <h3>Arsenal completo para cada tipo de vazamento</h3>
+              <p>Hidrofone subaquático · Geofone digital · Câmera termográfica · Roupa de mergulho · Pressurização de rede. Cada vazamento tem uma solução técnica específica. Não um martelo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SEÇÃO 6: CONTEXTO LOCAL (77%)
+         ============================================ -->
+    <section class="section-pad bg-navy context-section">
+      <div class="context-glow"></div>
+      <div class="container">
+        <div class="context-grid">
+          <div class="context-stat" data-animate>
+            <div class="counter-wrap">
+              <span class="counter-number"><span class="counter" data-target="77">0</span></span><span class="counter-percent">%</span>
+            </div>
+            <p class="counter-caption">da água tratada perdida</p>
+          </div>
+          <div class="context-text">
+            <p class="eyebrow eyebrow-cyan" data-animate>Contexto local</p>
+            <h2 data-animate>Porto Velho perde 77% da água tratada. O pior índice do Brasil.</h2>
+            <p data-animate>Se você mora em Porto Velho, as chances de ter um vazamento não detectado são altíssimas. Boa parte dessa perda acontece dentro das residências, sem que o morador perceba.</p>
+            <p data-animate>A Hidrodetect está aqui para resolver isso.</p>
+            <p class="source" data-animate>Fonte: Instituto Trata Brasil 2024. Porto Velho ocupa o 100.º lugar (último) no Ranking de Saneamento entre 100 municípios avaliados.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SEÇÃO 7: FAQ
+         ============================================ -->
+    <section id="faq" class="section-pad bg-white">
+      <div class="container">
+        <p class="eyebrow eyebrow-dark" data-animate>Perguntas frequentes</p>
+        <h2 class="section-title" data-animate>Respostas diretas.</h2>
+        <p class="section-subtitle" data-animate>As dúvidas mais comuns sobre detecção de vazamentos em Porto Velho.</p>
+
+        <div class="faq-list">
+          <!-- FAQ 1 -->
+          <div class="faq-item" data-animate>
+            <button class="faq-btn">
+              <span>Precisa esvaziar a piscina para detectar o vazamento?</span>
+              <span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+            </button>
+            <div class="faq-body">
+              <p>Não. O serviço é realizado com a piscina cheia. Usamos hidrofone digital subaquático, com o técnico dentro da água, que identifica o ponto exato do vazamento pelo som. Você não tem nenhum custo com esvaziamento, reenchimento ou reequilíbrio de produtos químicos.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item" data-animate>
+            <button class="faq-btn">
+              <span>Precisa quebrar a parede ou o piso para encontrar o vazamento?</span>
+              <span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+            </button>
+            <div class="faq-body">
+              <p>Não antes do diagnóstico. O geofone digital capta o som do vazamento através de concreto, cerâmica e alvenaria. Só após identificar o ponto exato é que qualquer abertura é necessária, e só naquele ponto específico, sem demolição desnecessária.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item" data-animate>
+            <button class="faq-btn">
+              <span>Como saber se tenho um vazamento oculto em casa?</span>
+              <span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+            </button>
+            <div class="faq-body">
+              <p>Os sinais mais comuns são: conta de água alta sem mudança de hábitos, mancha de umidade que volta depois de pintar, piso frio em um ponto específico, pressão da torneira caindo progressivamente ou o medidor de água girando com tudo fechado. Se identificar algum desses sintomas, a indicação é chamar um profissional com equipamento especializado.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item" data-animate>
+            <button class="faq-btn">
+              <span>O que é geofone digital e como funciona na detecção de vazamentos?</span>
+              <span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+            </button>
+            <div class="faq-body">
+              <p>Geofone digital é um equipamento de escuta eletrônica de alta sensibilidade que capta vibrações acústicas produzidas pela água escapando sob pressão em tubulações embutidas. O técnico posiciona o sensor na superfície, parede, piso ou laje, e o equipamento amplifica o som do vazamento, permitindo localizar o ponto exato sem abertura prévia.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item" data-animate>
+            <button class="faq-btn">
+              <span>O que é hidrofone e para que serve?</span>
+              <span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+            </button>
+            <div class="faq-body">
+              <p>Hidrofone é um microfone subaquático especializado para detecção de vazamentos em piscinas. Ele é inserido na água e capta o som do fluxo de água escapando pela tubulação de circulação, pelo ralo de fundo ou pela estrutura da piscina. Funciona com a piscina completamente cheia e em operação normal.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-item" data-animate>
+            <button class="faq-btn">
+              <span>O que é câmera termográfica e quando é usada?</span>
+              <span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+            </button>
+            <div class="faq-body">
+              <p>Câmera termográfica detecta variações de temperatura na superfície de paredes, pisos e lajes. Vazamentos causam diferença de temperatura que o infrared capta visualmente antes de qualquer mancha aparecer. É especialmente útil em imóveis onde o vazamento ainda não se manifestou na superfície, ou para confirmar suspeitas em grandes áreas.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 7 -->
+          <div class="faq-item" data-animate>
+            <button class="faq-btn">
+              <span>O que é teste de estanqueidade?</span>
+              <span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+            </button>
+            <div class="faq-body">
+              <p>Teste de estanqueidade é o procedimento em que a tubulação é pressurizada e monitorada durante um período. Se houver queda de pressão, confirma-se que existe perda no circuito. É indicado antes de reformas, obras novas, ou quando o medidor de água gira com todos os registros fechados e não há vazamento visível.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 8 -->
+          <div class="faq-item" data-animate>
+            <button class="faq-btn">
+              <span>O que é o laudo técnico de vazamento?</span>
+              <span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+            </button>
+            <div class="faq-body">
+              <p>É um documento formal emitido na mesma visita, com fotos do local, descrição técnica do problema, croqui de localização do ponto do vazamento e identificação do tipo de falha. O laudo é aceito por seguradoras para acionamento do seguro residencial e pode ser usado para contestar uma conta de água alta junto à concessionária.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 9 -->
+          <div class="faq-item" data-animate>
+            <button class="faq-btn">
+              <span>Quanto tempo demora o serviço de detecção?</span>
+              <span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+            </button>
+            <div class="faq-body">
+              <p>Em média de 1 a 3 horas, dependendo do tipo de vazamento e da extensão da área a ser inspecionada. O laudo técnico é entregue na mesma visita. O orçamento para o reparo também é apresentado no mesmo dia.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 10 -->
+          <div class="faq-item" data-animate>
+            <button class="faq-btn">
+              <span>A Hidrodetect atende fora de Porto Velho?</span>
+              <span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+            </button>
+            <div class="faq-body">
+              <p>Sim. Atendemos Porto Velho e região, incluindo municípios próximos. Entre em contato pelo WhatsApp para verificar disponibilidade para o seu endereço específico.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SEÇÃO 8: CTA FINAL
+         ============================================ -->
+    <section id="contato" class="section-pad bg-white cta-section">
+      <div class="container">
+        <p class="eyebrow eyebrow-dark" data-animate>Fale agora</p>
+        <h2 class="section-title" data-animate>Mande uma mensagem agora.</h2>
+        <p class="section-subtitle" data-animate style="margin-left:auto;margin-right:auto">Atendemos Porto Velho e região. Resposta rápida, visita técnica com hora marcada.</p>
+
+        <div data-animate>
+          <a href="https://wa.me/5569999463585?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20agendar%20uma%20detec%C3%A7%C3%A3o%20de%20vazamento." data-wa-cta data-magnetic class="btn-wa-lg" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.612.638l4.702-1.399A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.37 0-4.567-.72-6.396-1.953l-.342-.235-3.536 1.052 1.07-3.38-.26-.38A9.96 9.96 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+            Falar no WhatsApp
+          </a>
+        </div>
+
+        <div class="cta-contacts" data-animate>
+          <a href="tel:+5569999463585" data-contact-cta>(69) 9946-3585</a>
+          <span>·</span>
+          <a href="mailto:cacavazamentoshidrodetect@gmail.com" data-contact-cta>cacavazamentoshidrodetect@gmail.com</a>
+          <span>·</span>
+          <a href="https://instagram.com/hidrodetect_cacavazamentos" target="_blank" rel="noopener">@hidrodetect_cacavazamentos</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="/logo-preto.png" alt="Hidrodetect" height="32" width="auto" loading="lazy">
+          <p class="footer-tagline">HIDRODETECT · Caça Vazamentos</p>
+          <p class="footer-address">R. Jardins, 1228, Bairro Novo, Porto Velho/RO</p>
+        </div>
+
+        <div class="footer-contacts">
+          <p><a href="tel:+5569999463585" data-contact-cta>(69) 9946-3585</a></p>
+          <p><a href="mailto:cacavazamentoshidrodetect@gmail.com" data-contact-cta>cacavazamentoshidrodetect@gmail.com</a></p>
+          <p><a href="https://instagram.com/hidrodetect_cacavazamentos" target="_blank" rel="noopener">@hidrodetect_cacavazamentos</a></p>
+        </div>
+
+        <nav class="footer-nav">
+          <a href="#como-funciona">Como funciona</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#diferenciais">Diferenciais</a>
+          <a href="#contato">Contato</a>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Hidrodetect Engenharia e Impermeabilização · CNPJ 65.566.133/0001-75</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================
+       JAVASCRIPT
+       ============================================ -->
+  <script>
+  (function() {
+    'use strict';
+
+    /* ========================================
+       UTM CAPTURE
+       ======================================== */
+    (function() {
+      var params = new URLSearchParams(window.location.search);
+      ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k) {
+        var v = params.get(k);
+        if (v) localStorage.setItem(k, v);
+      });
+    })();
+
+    function buildWALink() {
+      var base = 'https://wa.me/5569999463585?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20agendar%20uma%20detec%C3%A7%C3%A3o%20de%20vazamento.';
+      var utms = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term']
+        .filter(function(k) { return localStorage.getItem(k); })
+        .map(function(k) { return k + '=' + encodeURIComponent(localStorage.getItem(k)); })
+        .join('&');
+      return utms ? base + '%20' + encodeURIComponent('[' + utms + ']') : base;
+    }
+
+    // Update all WA links with UTMs
+    document.querySelectorAll('[data-wa-cta]').forEach(function(a) {
+      a.href = buildWALink();
+    });
+
+    /* ========================================
+       META PIXEL EVENTS
+       ======================================== */
+    // Lead event on WA CTAs
+    document.querySelectorAll('[data-wa-cta]').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        if (typeof fbq !== 'undefined') fbq('track', 'Lead');
+      });
+    });
+
+    // Contact event on tel/email
+    document.querySelectorAll('[data-contact-cta]').forEach(function(el) {
+      el.addEventListener('click', function() {
+        if (typeof fbq !== 'undefined') fbq('track', 'Contact');
+      });
+    });
+
+    /* ========================================
+       INTERSECTION OBSERVER — Fade-in
+       ======================================== */
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('[data-animate]').forEach(function(el) {
+      observer.observe(el);
+    });
+
+    /* ========================================
+       MAGNETIC MOUSE (desktop only)
+       ======================================== */
+    if (window.matchMedia('(pointer: fine)').matches) {
+      document.querySelectorAll('[data-magnetic]').forEach(function(el) {
+        el.addEventListener('mousemove', function(e) {
+          var rect = el.getBoundingClientRect();
+          var x = (e.clientX - rect.left - rect.width / 2) * 0.15;
+          var y = (e.clientY - rect.top - rect.height / 2) * 0.15;
+          el.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
+        });
+        el.addEventListener('mouseleave', function() {
+          el.style.transform = '';
+        });
+      });
+    }
+
+    /* ========================================
+       COUNTER ANIMATION (77%)
+       ======================================== */
+    function animateCounter(el) {
+      var target = parseInt(el.dataset.target, 10);
+      var duration = 1200;
+      var start = performance.now();
+      function step(now) {
+        var progress = Math.min((now - start) / duration, 1);
+        var eased = 1 - Math.pow(1 - progress, 3); // easeOutCubic
+        el.textContent = Math.floor(eased * target);
+        if (progress < 1) {
+          requestAnimationFrame(step);
+        } else {
+          el.textContent = target;
+        }
+      }
+      requestAnimationFrame(step);
+    }
+
+    var counterObs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          animateCounter(e.target);
+          counterObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.counter').forEach(function(el) {
+      counterObs.observe(el);
+    });
+
+    /* ========================================
+       FAQ ACCORDION
+       ======================================== */
+    document.querySelectorAll('.faq-item').forEach(function(item) {
+      var btn = item.querySelector('.faq-btn');
+      btn.addEventListener('click', function() {
+        var isOpen = item.classList.contains('open');
+        // Close all
+        document.querySelectorAll('.faq-item.open').forEach(function(i) {
+          i.classList.remove('open');
+        });
+        // Toggle current
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+
+    /* ========================================
+       HAMBURGER MENU
+       ======================================== */
+    var burger = document.querySelector('.burger');
+    var navLinks = document.querySelector('.nav-links');
+    if (burger && navLinks) {
+      burger.addEventListener('click', function() {
+        navLinks.classList.toggle('open');
+      });
+      // Close on link click (mobile)
+      navLinks.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          navLinks.classList.remove('open');
+        });
+      });
+    }
+
+    /* ========================================
+       SMOOTH SCROLL — close mobile nav on anchor click
+       ======================================== */
+    document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+      a.addEventListener('click', function(e) {
+        var target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          var headerOffset = 64;
+          var elementPosition = target.getBoundingClientRect().top + window.pageYOffset;
+          window.scrollTo({ top: elementPosition - headerOffset, behavior: 'smooth' });
+        }
+      });
+    });
+
+  })();
+  </script>
+</body>
+</html>

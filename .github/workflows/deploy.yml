@@ -1,4 +1,4 @@
-name: Build & Deploy — Hidrodetect
+name: Deploy — Hidrodetect
 
 on:
   push:
@@ -12,27 +12,13 @@ jobs:
       - name: Checkout código
         uses: actions/checkout@v4
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-
-      - name: Setup Node.js 20
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - name: Instalar dependências
-        run: pnpm install --no-frozen-lockfile
-
-      - name: Build (frontend estático)
-        run: pnpm exec vite build
-
       - name: Upload via FTP para Hostaqui
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./dist/public/
+          local-dir: ./static/
           server-dir: /httpdocs/
           dangerous-clean-slate: false
           security: loose
