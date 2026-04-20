@@ -1,8 +1,7 @@
 export function reportWAConversion(url: string) {
-  const fn = (window as any).gtag_report_conversion;
-  if (typeof fn === "function") {
-    fn(url);
-  } else {
-    window.open(url, "_blank", "noopener,noreferrer");
+  const dl = (window as any).dataLayer;
+  if (Array.isArray(dl)) {
+    dl.push({ event: "whatsapp_click" });
   }
+  window.open(url, "_blank", "noopener,noreferrer");
 }
