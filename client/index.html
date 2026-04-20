@@ -16,6 +16,17 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'AW-18039045736');
+
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof url !== 'undefined') { window.location = url; }
+        };
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18039045736/dibvCO3v7o4cEOj815lD',
+          'event_callback': callback
+        });
+        return false;
+      }
     </script>
 
     <meta charset="UTF-8" />

@@ -1,3 +1,5 @@
+import { reportWAConversion } from "@/lib/conversion";
+
 const WA =
   "https://wa.me/5569999463585?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20agendar%20uma%20detec%C3%A7%C3%A3o%20de%20vazamento.";
 
@@ -64,6 +66,7 @@ export default function FinalCTA() {
             fontSize: 19,
             justifyContent: "center",
           }}
+          onClick={(e) => { e.preventDefault(); reportWAConversion(WA); }}
         >
           <WAIcon />
           Falar no WhatsApp
