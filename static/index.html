@@ -1567,6 +1567,16 @@
       });
     });
 
+    /* ========================================
+       WHATSAPP CONVERSION — dataLayer push
+       ======================================== */
+    document.querySelectorAll('[data-wa-cta]').forEach(function(el) {
+      el.addEventListener('click', function() {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: 'whatsapp_click' });
+      });
+    });
+
   })();
   </script>
 </body>
