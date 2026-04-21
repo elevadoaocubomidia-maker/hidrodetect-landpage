@@ -6,3 +6,7 @@ dist/
 *.log
 .DS_Store
 Thumbs.db
+
+# Contexto interno Claude Code / agência (não versionar)
+.claude/
+Referencia_LP
