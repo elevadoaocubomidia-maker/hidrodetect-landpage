@@ -84,6 +84,14 @@ pnpm dev
 - `robots.txt` com `Allow` explícito para GPTBot, ClaudeBot, PerplexityBot
 - Schema JSON-LD: LocalBusiness + FAQPage (5 perguntas)
 
+## Segurança de versionamento
+
+O repo é público (`elevadoaocubomidia-maker/hidrodetect-landpage`). O `.gitignore` bloqueia:
+- `.claude/` — contém briefing do cliente com CNPJ, endereço, contato privado; configs locais
+- `Referencia_LP` — materiais de referência interna da agência
+
+Nunca desativar essas entradas. Se adicionar arquivo novo que contenha dado de cliente (briefing, proposta, referência), incluir o padrão no `.gitignore` antes de commitar. VS Code faz auto-stage de untracked quando usuário clica "Commit" sem nada staged — sempre rodar `git status` antes.
+
 ## Gerado pelo Squad page-builder
 
 Este site foi reconstruído pelo squad `page-builder` do Opensquad em 2026-04-08 (run: `2026-04-08-191514`). Output original em `d:/Estudos - Automações - IA - DEV/Elevado ao Cubo/SQUAD/squads/page-builder/output/2026-04-08-191514/`.
